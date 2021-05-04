@@ -5,8 +5,8 @@ import dataSource from "../DATA.json";
 // console.log('Hello Coders! :)');
 
 const burger = document.querySelector(".burger");
-const nav = document.getElementsByTagName("nav")[0];
 const navList = document.querySelectorAll("nav li");
+const nav = document.getElementsByTagName("nav")[0];
 
 burger.addEventListener("click", function (e) {
   nav.classList.toggle("nav-active");
@@ -47,7 +47,7 @@ dataSource.restaurants.forEach((data) => {
       />
     </svg>
     <p>
-      ${data.description.substring(0, 80)} ...
+      ${data.description.substring(0, 88)} ...
     </p>
   </div>
 </div>`;
