@@ -42,6 +42,21 @@ body {
   background-color: rgba(245, 246, 247, 1);
 }
 
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  background-color: rgb(255, 129, 3);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
 /**
  * HEADER
  */
@@ -58,23 +73,28 @@ header .container {
   height: 4.6em;
 }
 
-#brand img {
+.brand-image {
   height: 1.6em;
 }
 
-nav ul {
+.brand-link {
+  padding: 0.8em 0.8em 0.8em 0;
+}
+
+.nav-list {
   display: flex;
 }
 
-nav ul li {
+.nav-item {
   list-style: none;
-  margin: auto 1em;
+  margin: auto 0.4em;
 }
 
-nav ul li a {
+.nav-item a {
   text-decoration: none;
   letter-spacing: 0.06em;
   font-family: Poppins-Medium;
+  padding: 0.8em;
 }
 
 .nav-active {
@@ -92,17 +112,18 @@ nav ul li a {
   }
 }
 
-#sticky {
+#drawer {
   display: flex;
   margin-left: 4em;
 }
 
-.cart a {
+.cart-link {
   text-decoration: none;
   font-family: Poppins-Medium;
+  padding: 0.8em 0 0.8em 0.8em;
 }
 
-.cart svg {
+.cart-link svg {
   margin-right: 0.2em;
 }
 
@@ -156,11 +177,11 @@ nav ul li a {
   align-items: center;
 }
 
-.hero label {
+.hero-label {
   letter-spacing: 0.06em;
 }
 
-.hero h1 {
+.hero-title {
   font-family: DMSerifDisplay-Regular;
   font-size: 3em;
   margin-top: 0.4em;
@@ -168,13 +189,13 @@ nav ul li a {
   letter-spacing: 0.02em;
 }
 
-.hero p {
+.hero-desc {
   letter-spacing: 0.02em;
 }
 
 /* CATALOG */
 
-.catalog {
+#catalog {
   margin-top: 4em;
   align-items: center;
 }
@@ -184,7 +205,7 @@ nav ul li a {
   margin-bottom: 2.4em;
 }
 
-.catalog-header h1 {
+.catalog-header-title {
   font-family: DMSerifDisplay-Regular;
   font-size: 2.4em;
   margin-bottom: 0.2em;
@@ -208,7 +229,7 @@ nav ul li a {
   margin-right: 0.8em;
 }
 
-.catalog-product .img {
+.product-img {
   height: 16rem;
   width: 100%;
   background-position: center;
@@ -216,21 +237,21 @@ nav ul li a {
   background-size: cover;
 }
 
-.catalog-product-detail {
+.product-detail {
   padding: 1.2em 1.2em;
 }
 
-.catalog-product-detail h2 {
+.product-detail-title {
   font-family: DMSerifDisplay-Regular;
   font-size: 1.8em;
   margin-bottom: 0.1em;
 }
 
-.catalog-product-detail label {
+.product-detail-label {
   font-weight: bold;
 }
 
-.catalog-product-detail p {
+.product-detail-desc {
   color: rgb(150, 153, 156);
 }
 
@@ -252,17 +273,18 @@ footer .container {
   font-weight: bold;
 }
 
-.social {
+#social {
   display: flex;
 }
 
-.social li {
+.social-item {
   list-style: none;
 }
 
-.social li a {
+.social-item a {
   text-decoration: none;
-  margin-left: 1.4em;
+  margin-left: 0.2em;
+  padding: 0.8em;
 }
 
 /**
@@ -329,7 +351,7 @@ footer .container {
     box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.33);
   }
 
-  nav ul {
+  .nav-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,7 +373,7 @@ footer .container {
     overflow-x: hidden;
   }
 
-  nav li {
+  .nav-item {
     opacity: 0;
   }
 
@@ -399,15 +421,15 @@ footer .container {
     font-size: 0.9em;
   }
 
-  .catalog-product-detail h2 {
+  .product-detail h2 {
     font-size: 1.6em;
   }
 
-  .catalog-product-detail label {
+  .product-detail label {
     font-size: 0.9em;
   }
 
-  .catalog-product-detail p {
+  .product-detail p {
     font-size: 0.9em;
   }
 }

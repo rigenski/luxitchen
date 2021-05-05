@@ -28,10 +28,12 @@ dataSource.restaurants.forEach((data) => {
   const list = document.querySelector(".catalog-list");
 
   list.innerHTML += `<div class="catalog-product">
-  <div class="img" style="background-image:url(${data.pictureId});"></div>
-  <div class="catalog-product-detail">
-    <h2>${data.name}</h2>
-    <label>${data.city} | ${data.rating}</label>
+  <div class="product-img" style="background-image:url(${
+    data.pictureId
+  });"></div>
+  <div class="product-detail">
+    <h2 class="product-detail-title">${data.name}</h2>
+    <label class="product-detail-label">${data.city} | ${data.rating}</label>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
@@ -46,7 +48,7 @@ dataSource.restaurants.forEach((data) => {
         style="color: rgba(255, 131, 3, 0.75)"
       />
     </svg>
-    <p>
+    <p class="product-detail-desc">
       ${data.description.substring(0, 88)} ...
     </p>
   </div>
