@@ -299,6 +299,7 @@ header .container {
 .feedback-profile img {
   border-radius: 50%;
   height: 4.6em;
+  width: 4.6em;
 }
 
 .feedback-profile-detail {
