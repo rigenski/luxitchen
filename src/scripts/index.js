@@ -1,6 +1,7 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
-import dataSource from "../DATA.json";
+import dataRestaurant from "../DATA.json";
+import dataFeedback from "../DataFeedback.json";
 
 // console.log('Hello Coders! :)');
 
@@ -24,7 +25,7 @@ burger.addEventListener("click", function (e) {
   burger.classList.toggle("toggle");
 });
 
-dataSource.restaurants.forEach((data) => {
+dataRestaurant.restaurants.forEach((data) => {
   const list = document.querySelector(".catalog-list");
 
   list.innerHTML += `<div class="catalog-product">
@@ -52,5 +53,26 @@ dataSource.restaurants.forEach((data) => {
       ${data.description.substring(0, 88)} ...
     </p>
   </div>
+</div>`;
+});
+
+dataFeedback.feedbacks.forEach((data) => {
+  const list = document.querySelector(".feedback-list");
+
+  list.innerHTML += `<div class="feedback-item">
+  <div class="feedback-profile">
+    <img
+      class="feedback-profile-image"
+      src="${data.pictureId}"
+      alt=""
+    />
+    <div class="feedback-profile-detail">
+      <h2>${data.name}</h2>
+      <label>${data.role}</label>
+    </div>
+  </div>
+  <p class="feedback-desc">
+    “ ${data.description} ”
+  </p>
 </div>`;
 });
