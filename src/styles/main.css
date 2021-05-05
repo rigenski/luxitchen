@@ -472,11 +472,13 @@ footer .container {
     font-size: 0.9em;
   }
 
-  .catalog-header h1 {
+  .catalog-header h1,
+  .feedback-header h1 {
     font-size: 2em;
   }
 
-  .catalog-header p {
+  .catalog-header p,
+  .feedback-header p {
     font-size: 0.9em;
   }
 

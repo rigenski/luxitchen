@@ -31,7 +31,7 @@ dataRestaurant.restaurants.forEach((data) => {
   list.innerHTML += `<div class="catalog-product">
   <div class="product-img" style="background-image:url(${
     data.pictureId
-  });"></div>
+  });" alt="${data.name} avatar image"></div>
   <div class="product-detail">
     <h2 class="product-detail-title">${data.name}</h2>
     <label class="product-detail-label">${data.city} | ${data.rating}</label>
