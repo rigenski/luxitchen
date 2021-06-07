@@ -1,0 +1,156 @@
+/**
+ * RESPONSIVE
+ */
+
+@media screen and (max-width: 1440px) {
+  .container {
+    padding-right: 6em;
+    padding-left: 6em;
+  }
+
+  .wrapper {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .catalog-product {
+    width: 20em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-right: 4em;
+    padding-left: 4em;
+  }
+
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .catalog-product {
+    width: 16em;
+  }
+
+  .feedback-item {
+    width: 42%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  header {
+    position: fixed;
+    z-index: 1000;
+  }
+
+  nav {
+    position: fixed;
+    right: 0px;
+    height: 94vh;
+    top: 7.4vh;
+    background-color: #ffffff;
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.33);
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    justify-content: space-around;
+    margin-top: 4vh;
+  }
+
+  .cart {
+    display: none;
+  }
+
+  main {
+    padding-top: 4.6em;
+    z-index: 1;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-item {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .catalog-product {
+    width: 18em;
+    margin-bottom: 1.8em;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .catalog-product {
+    width: 22em;
+    margin: 0;
+    margin-bottom: 2em;
+  }
+
+  .hero {
+    height: 56vh;
+  }
+
+  .hero label {
+    font-size: 0.9em;
+  }
+
+  .hero h1 {
+    font-size: 2.4em;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .catalog-header h1,
+  .feedback-header h1 {
+    font-size: 2em;
+  }
+
+  .catalog-header p,
+  .feedback-header p {
+    font-size: 0.9em;
+  }
+
+  .product-detail h2 {
+    font-size: 1.6em;
+  }
+
+  .product-detail label {
+    font-size: 0.9em;
+  }
+
+  .product-detail p {
+    font-size: 0.9em;
+  }
+
+  .feedback-item {
+    width: 100%;
+  }
+}
