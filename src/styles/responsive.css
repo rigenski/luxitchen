@@ -99,7 +99,7 @@
 
   .catalog-product {
     width: 18em;
-    margin-bottom: 1.8em;
+    margin-bottom: 1.4em;
   }
 }
 
@@ -112,6 +112,12 @@
 
   .hero {
     height: 56vh;
+    background: linear-gradient(
+        to right,
+        rgba(3, 9, 17, 0.788),
+        rgba(3, 9, 17, 0.377)
+      ),
+      url(./../public/images/heros/hero-image_2.jpg) no-repeat top center;
   }
 
   .hero label {
@@ -129,13 +135,19 @@
   }
 
   .catalog-header h1,
-  .feedback-header h1 {
+  .feedback-header h1,
+  .product-detail-title {
     font-size: 2em;
   }
 
   .catalog-header p,
-  .feedback-header p {
+  .feedback-header p,
+  .product-detail-location h4 {
     font-size: 0.9em;
+  }
+
+  .product-detail-location svg {
+    margin-right: 0.4em;
   }
 
   .product-content h2 {
