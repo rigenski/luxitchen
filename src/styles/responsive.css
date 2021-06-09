@@ -130,16 +130,18 @@
     font-size: 0.9em;
   }
 
-  .products-header {
-    margin-top: 2.8em;
-    margin-bottom: 1.4em;
+  .products-header,
+  .product-detail-header {
+    margin-top: 2.4em;
+    margin-bottom: 1.2em;
   }
 
   .products-header-title {
     font-size: 1.8em;
   }
 
-  .products-header-desc {
+  .products-header-desc,
+  .product-detail-location {
     font-size: 0.9em;
   }
 
@@ -158,6 +160,17 @@
 
   .product-content-desc {
     font-size: 0.9em;
+  }
+
+  /* PRODUCT DETAIL */
+
+  .product-detail-title {
+    font-size: 2em;
+  }
+
+  .product-detail-overview h1,
+  .product-detail-menu-header h1 {
+    font-size: 1.6em;
   }
 }
 

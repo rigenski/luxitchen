@@ -245,11 +245,11 @@ footer .container {
 
 #products {
   align-items: center;
+  margin-top: 3.2em;
 }
 
 .products-header {
   text-align: center;
-  margin-top: 3.2em;
   margin-bottom: 1.8em;
 }
 
@@ -372,25 +372,25 @@ footer .container {
 * PRODUCT DETAIL
 */
 
-.product-detail {
-  margin-top: 2em;
+.product-detail-header {
+  margin-top: 3.2em;
+  margin-bottom: 1.8em;
 }
 
 .product-detail-title {
   font-size: 2.4em;
   font-family: DMSerifDisplay-Regular;
-}
-
-.product-detail-location {
-  display: flex;
-  opacity: 75%;
-  padding-top: 0.1em;
+  margin-bottom: 0.2em;
 }
 
 .product-detail-spec {
   display: flex;
   margin-top: 0.4em;
   justify-content: space-between;
+}
+
+.product-detail-location {
+  display: flex;
 }
 
 .product-detail-location svg {
@@ -415,19 +415,19 @@ footer .container {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 1.2em;
   border-radius: 0.8em;
 }
 
 .product-detail-overview,
 .product-detail-menus {
-  margin-top: 1em;
+  margin-top: 1.2em;
 }
 
-.product-detail-overview h2 {
+.product-detail-overview h1,
+.product-detail-menu-header h1 {
   font-family: DMSerifDisplay-Regular;
   font-size: 2em;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
 }
 
 .product-detail-category {
@@ -452,9 +452,4 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.product-detail-menu-header h1 {
-  font-family: DMSerifDisplay-Regular;
-  font-size: 2em;
 }
