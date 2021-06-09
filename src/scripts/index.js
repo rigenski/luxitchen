@@ -7,9 +7,9 @@ import dataFeedback from "../DataFeedback.json";
 
 const app = new App({
   burger: document.querySelector(".burger"),
-  navList: document.querySelectorAll("nav li"),
-  nav: document.getElementsByTagName("nav")[0],
-  content: document.getElementById("main-content"),
+  navList: document.querySelectorAll(".nav-item"),
+  nav: document.getElementById("nav"),
+  content: document.getElementById("main"),
 });
 
 window.addEventListener("hashchange", () => {

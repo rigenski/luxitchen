@@ -1,7 +1,7 @@
 import CONFIG from "../../globals/config";
 
 const createRestaurantTemplate = (data) => `
-<div class="catalog-product">
+<div class="product-item">
 <a href="#/detail/${data.id}">
 <div class="product-img" style="background-image:url(${CONFIG.BASE_IMAGE_URL}/${
   data.pictureId
@@ -60,7 +60,25 @@ const createRestaurantDetailTemplate = (data) => `
     <div class="product-detail-overview">
       <h2>Overview</h2>
       <p>${data.description}</p>
+      <div class="product-detail-category">
+        
+      </div>
+    </div>
+
+    <div class="product-detail-menu">
+    <div class="product-detail-menu-header">
+      <h1>Menu  </h1>
+    </div>
+    <h2>Food: </h2>
     </div>
   `;
 
-export { createRestaurantTemplate, createRestaurantDetailTemplate };
+const createRestaurantDetailCategoryTemplate = (data) => `
+    <button>${data}</button>
+  `;
+
+export {
+  createRestaurantTemplate,
+  createRestaurantDetailTemplate,
+  createRestaurantDetailCategoryTemplate,
+};

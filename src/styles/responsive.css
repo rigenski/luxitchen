@@ -13,7 +13,7 @@
     padding-right: 2em;
   }
 
-  .catalog-product {
+  .product-item {
     width: 20em;
   }
 }
@@ -29,7 +29,7 @@
     padding-right: 0;
   }
 
-  .catalog-product {
+  .product-item {
     width: 16em;
   }
 
@@ -97,69 +97,81 @@
     cursor: pointer;
   }
 
-  .catalog-product {
-    width: 18em;
-    margin-bottom: 1.4em;
-  }
-}
-
-@media screen and (max-width: 672px) {
-  .catalog-product {
-    width: 22em;
-    margin: 0;
-    margin-bottom: 2em;
-  }
-
   .hero {
-    height: 56vh;
+    height: 34em;
     background: linear-gradient(
         to right,
-        rgba(3, 9, 17, 0.788),
-        rgba(3, 9, 17, 0.377)
+        rgba(3, 9, 17, 0.8),
+        rgba(0, 0, 0, 0.06)
       ),
       url(./../public/images/heros/hero-image_2.jpg) no-repeat top center;
   }
 
-  .hero label {
+  .product {
+    width: 18em;
+    margin-bottom: 1.4em;
+  }
+
+  .product-item {
+    margin-bottom: 1.2em;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+  }
+
+  .hero-label {
     font-size: 0.9em;
   }
 
-  .hero h1 {
-    font-size: 2.4em;
-    margin-top: 0.2em;
-    margin-bottom: 0.4em;
+  .hero-title {
+    font-size: 2.6em;
   }
 
-  .hero p {
+  .hero-desc {
     font-size: 0.9em;
   }
 
-  .catalog-header h1,
-  .feedback-header h1,
-  .product-detail-title {
-    font-size: 2em;
+  .products-header {
+    margin-top: 2.8em;
+    margin-bottom: 1.4em;
   }
 
-  .catalog-header p,
-  .feedback-header p,
-  .product-detail-location h4 {
+  .products-header-title {
+    font-size: 1.8em;
+  }
+
+  .products-header-desc {
     font-size: 0.9em;
   }
 
-  .product-detail-location svg {
-    margin-right: 0.4em;
+  .product-content-title {
+    font-size: 1.4em;
+    margin-bottom: 0;
   }
 
-  .product-content h2 {
-    font-size: 1.6em;
-  }
-
-  .product-content label {
+  .product-content-label {
     font-size: 0.9em;
   }
 
-  .product-content p {
+  .product-content svg {
+    height: 0.9em;
+  }
+
+  .product-content-desc {
     font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .hero {
+    height: 64vh;
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .product-img {
+    height: 14em;
   }
 
   .feedback-item {

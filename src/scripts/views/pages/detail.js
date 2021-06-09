@@ -1,6 +1,9 @@
 import UrlParser from "../../routes/url-parser";
 import RestaurantDbSource from "../../data/restaurantdb-source";
-import { createRestaurantDetailTemplate } from "../templates/template";
+import {
+  createRestaurantDetailTemplate,
+  createRestaurantDetailCategoryTemplate,
+} from "../templates/template";
 
 const Detail = {
   async render() {
@@ -18,12 +21,23 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
-    const catalogDetail = document.querySelector(".product-detail");
+    const productDetail = document.querySelector(".product-detail");
+
     console.log(restaurant);
 
-    catalogDetail.innerHTML = createRestaurantDetailTemplate(
+    productDetail.innerHTML = createRestaurantDetailTemplate(
       restaurant.restaurant
     );
+
+    const productDetailCategory = document.querySelector(
+      ".product-detail-category"
+    );
+
+    restaurant.restaurant.categories.forEach((data) => {
+      productDetailCategory.innerHTML += createRestaurantDetailCategoryTemplate(
+        data.name
+      );
+    });
   },
 };
 
