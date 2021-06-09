@@ -40,7 +40,7 @@ const Home = {
     const restaurantList = await RestaurantDbSource.restaurantList();
     const catalogList = document.querySelector(".catalog-list");
 
-    restaurantList.forEach((data) => {
+    restaurantList.restaurants.forEach((data) => {
       catalogList.innerHTML += createRestaurantTemplate(data);
     });
   },
