@@ -16,6 +16,10 @@
   .product-item {
     width: 20em;
   }
+
+  .product-detail-review-item {
+    width: 28%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -35,6 +39,10 @@
 
   .feedback-item {
     width: 42%;
+  }
+
+  .product-detail-review-item {
+    width: 44%;
   }
 }
 
@@ -169,8 +177,25 @@
   }
 
   .product-detail-overview h1,
-  .product-detail-menu-header h1 {
-    font-size: 1.6em;
+  .product-detail-review h1 {
+    font-size: 1.8em;
+  }
+
+  .product-detail-menu {
+    display: block;
+  }
+
+  .product-detail-menu-container {
+    margin-bottom: 0.4em;
+  }
+
+  .product-detail-menu-container:first-child {
+    margin-right: 0;
+  }
+
+  .product-detail-review-item {
+    width: 44%;
+    margin-bottom: 0.8em;
   }
 }
 
@@ -188,6 +213,10 @@
   }
 
   .feedback-item {
+    width: 100%;
+  }
+
+  .product-detail-review-item {
     width: 100%;
   }
 }

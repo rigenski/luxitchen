@@ -310,7 +310,7 @@ footer .container {
 }
 
 .product-content-desc {
-  opacity: 60%;
+  opacity: 75%;
 }
 
 /* FEEDBACK */
@@ -372,6 +372,8 @@ footer .container {
 * PRODUCT DETAIL
 */
 
+/* PRODUCT DETAIL HEADER */
+
 .product-detail-header {
   margin-top: 3.2em;
   margin-bottom: 1.8em;
@@ -382,6 +384,8 @@ footer .container {
   font-family: DMSerifDisplay-Regular;
   margin-bottom: 0.2em;
 }
+
+/* PRODUCT DETAIL SPECIFIC */
 
 .product-detail-spec {
   display: flex;
@@ -396,6 +400,10 @@ footer .container {
 .product-detail-location svg {
   padding-top: 0.2em;
   margin-right: 0.6em;
+}
+
+.product-detail-location span {
+  font-family: Poppins-Medium;
 }
 
 .product-detail-rating svg {
@@ -418,13 +426,16 @@ footer .container {
   border-radius: 0.8em;
 }
 
+/* PRODUCT DETAIL OVERVIEW */
+
 .product-detail-overview,
-.product-detail-menus {
+.product-detail-review {
   margin-top: 1.2em;
+  margin-bottom: 1.8em;
 }
 
 .product-detail-overview h1,
-.product-detail-menu-header h1 {
+.product-detail-review h1 {
   font-family: DMSerifDisplay-Regular;
   font-size: 2em;
   margin-bottom: 0.2em;
@@ -432,8 +443,11 @@ footer .container {
 
 .product-detail-category {
   margin-top: 0.8em;
+  margin-bottom: 1.2em;
   display: flex;
 }
+
+/* PRODUCT DETAIL CATEGORY */
 
 .product-detail-category button {
   margin-right: 0.4em;
@@ -447,9 +461,62 @@ footer .container {
   box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.404);
 }
 
-.product-detail-menu-header {
-  margin-top: 1em;
+/* PRODUCT DETAIL MENU */
+
+.product-detail-menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.product-detail-menu-container {
+  margin-bottom: 1em;
+}
+
+.product-detail-menu-container:first-child {
+  margin-right: 1em;
+}
+
+.product-detail-menu h2 {
+  font-family: DMSerifDisplay-Regular;
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+}
+
+/* PRODUCT DETAIL REVIEW */
+
+.product-detail-review-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-detail-review-item {
+  padding: 1em;
+  width: 28%;
+  margin-bottom: 1.2em;
+  border-radius: 0.4em;
+  background-color: #fff;
+  box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.404);
+}
+
+.product-detail-review-header {
+  display: flex;
+}
+
+.product-detail-review-title {
+  margin-left: 1.2em;
+}
+
+.product-detail-review-title h2 {
+  font-family: DMSerifDisplay-Regular;
+  font-size: 1.4em;
+}
+
+.product-detail-review-title label {
+  font-size: 0.8em;
+  position: absolute;
+  margin-top: -0.06em;
+}
+
+.product-detail-review-desc {
+  margin-top: 1.2em;
 }

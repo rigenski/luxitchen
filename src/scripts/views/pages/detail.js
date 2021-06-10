@@ -2,7 +2,9 @@ import UrlParser from "../../routes/url-parser";
 import RestaurantDbSource from "../../data/restaurantdb-source";
 import {
   createRestaurantDetailTemplate,
+  createMenuItemTemplate,
   createRestaurantDetailCategoryTemplate,
+  createReviewItemTemplate,
 } from "../templates/template";
 
 const Detail = {
@@ -34,9 +36,27 @@ const Detail = {
     );
 
     restaurant.restaurant.categories.forEach((data) => {
-      productDetailCategory.innerHTML += createRestaurantDetailCategoryTemplate(
-        data.name
-      );
+      productDetailCategory.innerHTML +=
+        createRestaurantDetailCategoryTemplate(data);
+    });
+
+    const menuFoods = document.querySelector(".product-detail-menu-foods");
+
+    const menuDrinks = document.querySelector(".product-detail-menu-drinks");
+
+    const reviewList = document.querySelector(".product-detail-review-list");
+
+    restaurant.restaurant.menus.foods.forEach((data) => {
+      menuFoods.innerHTML += createMenuItemTemplate(data);
+    });
+
+    restaurant.restaurant.menus.drinks.forEach((data) => {
+      menuDrinks.innerHTML += createMenuItemTemplate(data);
+    });
+
+    restaurant.restaurant.customerReviews.slice(-6).forEach((data) => {
+      let name = data.name[0].toUpperCase() + data.name.slice(1);
+      reviewList.innerHTML += createReviewItemTemplate(data, name);
     });
   },
 };
