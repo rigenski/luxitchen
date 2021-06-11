@@ -12,14 +12,17 @@ class App {
     this._initialAppShell();
   }
 
-  _initialAppShell() {
-    DrawerInitiator.init({
+  async _initialAppShell() {
+    await DrawerInitiator.init({
       burger: this._burger,
       navList: this._navList,
       nav: this._nav,
     });
 
     // kita bisa menginisiasikan komponen lain bila ada
+    // setTimeout(function () {
+    //   FormReviewInitiator.init();
+    // }, 1000);
   }
 
   async renderPage() {

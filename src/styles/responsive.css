@@ -197,6 +197,10 @@
     width: 44%;
     margin-bottom: 0.8em;
   }
+
+  .product-detail-review-form form {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 584px) {
@@ -217,6 +221,10 @@
   }
 
   .product-detail-review-item {
+    width: 100%;
+  }
+
+  .product-detail-review-form form {
     width: 100%;
   }
 }

@@ -5,7 +5,9 @@ import {
   createMenuItemTemplate,
   createRestaurantDetailCategoryTemplate,
   createReviewItemTemplate,
+  createFormReviewTemplate,
 } from "../templates/template";
+import FormReviewInitiator from "../../utils/form-review-initiator";
 
 const Detail = {
   async render() {
@@ -24,8 +26,6 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
     const productDetail = document.querySelector(".product-detail");
-
-    console.log(restaurant);
 
     productDetail.innerHTML = createRestaurantDetailTemplate(
       restaurant.restaurant
@@ -58,6 +58,12 @@ const Detail = {
       let name = data.name[0].toUpperCase() + data.name.slice(1);
       reviewList.innerHTML += createReviewItemTemplate(data, name);
     });
+
+    const formReview = document.querySelector(".product-detail-review-form");
+
+    formReview.innerHTML = createFormReviewTemplate();
+
+    FormReviewInitiator.init();
   },
 };
 

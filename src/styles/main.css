@@ -413,7 +413,7 @@ footer .container {
 
 .product-detail-rating {
   display: flex;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.4em;
   font-family: Poppins-SemiBold;
 }
 
@@ -487,6 +487,7 @@ footer .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 1em;
 }
 
 .product-detail-review-item {
@@ -508,15 +509,72 @@ footer .container {
 
 .product-detail-review-title h2 {
   font-family: DMSerifDisplay-Regular;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  margin-bottom: -0.2em;
 }
 
 .product-detail-review-title label {
   font-size: 0.8em;
-  position: absolute;
-  margin-top: -0.06em;
 }
 
 .product-detail-review-desc {
   margin-top: 1.2em;
+}
+
+/* FORM REVIEW */
+
+.product-detail-review-form {
+  display: flex;
+  justify-content: center;
+}
+
+.product-detail-review-form form {
+  box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.404);
+  width: 40%;
+  padding: 1.2em;
+  background-color: #fff;
+  border-radius: 0.4em;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.8em;
+}
+
+.form-title h2 {
+  font-family: DMSerifDisplay-Regular;
+  font-size: 1.4em;
+}
+
+.form-group {
+  margin-bottom: 0.8em;
+}
+
+.form-group label {
+  display: block;
+  font-family: Poppins-Medium;
+  font-size: 0.9em;
+}
+
+.form-input {
+  width: 99%;
+  height: 1.8em;
+  border: none;
+  border-bottom: 1px solid #111;
+}
+
+.form-input:focus {
+  outline: none;
+  background-color: none;
+}
+
+#form-submit {
+  padding: 0.4em 1.2em;
+  border-radius: 0.4em;
+  border: none;
+  background-color: rgba(255, 131, 3, 0.75);
+  font-size: 0.9em;
+  color: rgb(255, 255, 255);
+  font-family: Poppins-SemiBold;
 }

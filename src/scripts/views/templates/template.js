@@ -92,10 +92,13 @@ const createRestaurantDetailTemplate = (data) => `
   </div>
 </div>
 <div class="product-detail-review">
-  <h1>Review</h1>
-  <div class="product-detail-review-list">
+<h1>Review</h1>
+<div class="product-detail-review-list">
 
-  </div>
+</div>
+<div class="product-detail-review-form">
+  
+</div>
 </div>
 </div>
   `;
@@ -128,10 +131,27 @@ const createReviewItemTemplate = (data, name) => `
     </div>
   `;
 
+const createFormReviewTemplate = () => `
+<form>
+    <div class="form-title">
+      <h2>Send Review</h2>  
+    </div>
+      <div class="form-group">
+        <label for="input-name">Name</label>
+        <input type="text" class="form-input" id="input-name">
+      </div>
+      <div class="form-group">
+        <label for="input-review">Review</label>
+        <input type="text" class="form-input" id="input-review">
+      </div>
+      <button type="submit" id="form-submit">Submit</button>
+    </form>`;
+
 export {
   createRestaurantTemplate,
   createRestaurantDetailTemplate,
   createRestaurantDetailCategoryTemplate,
   createMenuItemTemplate,
   createReviewItemTemplate,
+  createFormReviewTemplate,
 };
