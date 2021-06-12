@@ -6,9 +6,12 @@ const FormReviewInitiator = {
     const review = document.getElementById("input-review");
     const submit = document.getElementById("form-submit");
 
+    let url = window.location.hash;
+    url = url.split("/");
+
     submit.addEventListener("click", function () {
       const data = JSON.stringify({
-        id: "rqdv5juczeskfw1e867",
+        id: url[2],
         name: name.value,
         review: review.value,
       });

@@ -21,6 +21,7 @@ window.addEventListener("load", () => {
   app.renderPage();
 });
 
+
 // dataFeedback.feedbacks.forEach((data) => {
 //   const list = document.querySelector(".feedback-list");
 

@@ -20,9 +20,6 @@ class App {
     });
 
     // kita bisa menginisiasikan komponen lain bila ada
-    // setTimeout(function () {
-    //   FormReviewInitiator.init();
-    // }, 1000);
   }
 
   async renderPage() {
