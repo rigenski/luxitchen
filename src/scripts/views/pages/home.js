@@ -22,14 +22,14 @@ const Home = {
       </div>
     <div class="container">
     <div class="wrapper">
-      <div id="products">
-        <div class="products-header">
-          <h1 class="products-header-title">Catalog Restaurant</h1>
-          <p class="products-header-desc">
+      <div id="restaurant">
+        <div class="restaurant__header">
+          <h1 class="restaurant__header-title">Catalog Restaurant</h1>
+          <p class="restaurant__header-desc">
             Find a restaurant and make sure you choose the right one.
           </p>
         </div>
-        <div class="product-list">
+        <div class="restaurant-list">
         </div>
       </div>
   </div>
@@ -38,7 +38,7 @@ const Home = {
 
   async afterRender() {
     const restaurantList = await RestaurantDbSource.restaurantList();
-    const productList = document.querySelector(".product-list");
+    const productList = document.querySelector(".restaurant-list");
 
     restaurantList.restaurants.forEach((data) => {
       productList.innerHTML += createRestaurantTemplate(data);

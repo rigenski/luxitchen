@@ -1,16 +1,18 @@
 import CONFIG from "../../globals/config";
 
 const createRestaurantTemplate = (data) => `
-<div class="product-item">
+<div class="restaurant-item">
   <a href="#/detail/${data.id}">
     <div
-      class="product-img"
+      class="restaurant-item-image"
       style="background-image: url(${CONFIG.BASE_IMAGE_URL}/${data.pictureId})"
       alt="${data.name} avatar image"
     ></div>
-    <div class="product-content">
-      <h2 class="product-content-title">${data.name}</h2>
-      <label class="product-content-label">${data.city} | ${data.rating}</label>
+    <div class="restaurant-item__content">
+      <h2 class="restaurant-item__content-title">${data.name}</h2>
+      <label class="restaurant-item__content-label">${data.city} | ${
+  data.rating
+}</label>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"
@@ -25,7 +27,7 @@ const createRestaurantTemplate = (data) => `
           style="color: #FF8303"
         />
       </svg>
-      <p class="product-content-desc">
+      <p class="restaurant-item__content-description">
         ${data.description.substring(0, 88)} ...
       </p>
     </div></a
@@ -33,10 +35,10 @@ const createRestaurantTemplate = (data) => `
 </div>
 `;
 const createRestaurantDetailTemplate = (data) => `
-<div class="product-detail-header">
-  <h1 class="product-detail-title">${data.name}</h1>
-  <div class="product-detail-spec">
-    <label class="product-detail-location">
+<div class="restaurant-detail__header">
+  <h1 class="restaurant-detail__header-title">${data.name}</h1>
+  <div class="restaurant-detail__header-label">
+    <label class="restaurant-detail__header-location">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -51,7 +53,7 @@ const createRestaurantDetailTemplate = (data) => `
       </svg>
       <span>${data.address}, ${data.city}</span>
     </label>
-    <label class="product-detail-rating"
+    <label class="restaurant-detail__header-rating"
       >${data.rating}<svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"
@@ -69,34 +71,34 @@ const createRestaurantDetailTemplate = (data) => `
   </div>
 </div>
 <div
-  class="product-detail-img"
+  class="restaurant-detail__image"
   style="background-image: url(${CONFIG.BASE_IMAGE_URL}/${data.pictureId})"
-  alt="${data.name} avatar image"
+  alt="${data.name} Restaurant Image"
 ></div>
-<div class="product-detail-overview">
+<div class="restaurant-detail__overview">
   <h1>Overview</h1>
   <p>${data.description}</p>
-  <div class="product-detail-category"></div>
-  <div class="product-detail-menu">
-  <div class="product-detail-menu-container">
+  <div class="restaurant-detail__category"></div>
+  <div class="restaurant-detail__menu">
+  <div class="restaurant-detail__menu-container">
     <h2>Foods</h2>
-    <div class="product-detail-menu-foods menu-list">
+    <div class="restaurant-detail__menu-foods menu-list">
     
     </div>
   </div>
-  <div class="product-detail-menu-container">
+  <div class="restaurant-detail__menu-container">
     <h2>Drinks</h2>
-    <div class="product-detail-menu-drinks menu-list">
+    <div class="restaurant-detail__menu-drinks menu-list">
     
     </div>
   </div>
 </div>
-<div class="product-detail-review">
+<div class="restaurant-detail__review">
 <h1>Review</h1>
-<div class="product-detail-review-list">
+<div class="restaurant-detail__review-list">
 
 </div>
-<div class="product-detail-review-form">
+<div class="restaurant-detail__review-form">
   
 </div>
 </div>
@@ -108,24 +110,24 @@ const createRestaurantDetailCategoryTemplate = (data) => `
   `;
 
 const createMenuItemTemplate = (data) => `
-  <span class="product-detail-menu-item">
+  <span class="restaurant-detail__menu-item">
         ${data.name}, 
   </span>
   `;
 
 const createReviewItemTemplate = (data, name) => `
-    <div class="product-detail-review-item">
-      <div class="product-detail-review-header">
+    <div class="restaurant-detail__review-item">
+      <div class="restaurant-detail__review-header">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
           <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
         </svg>
-        <div class="product-detail-review-title">
+        <div class="restaurant-detail__review-title">
           <h2>${name}</h2>
           <label>${data.date}</label>
         </div>
       </div>
-      <p class="product-detail-review-desc">
+      <p class="restaurant-detail__review-desc">
         "${data.review}"
       </p>
     </div>

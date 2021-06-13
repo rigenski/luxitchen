@@ -56,13 +56,14 @@ body {
 
 .skip-content {
   position: absolute;
-  top: -60px;
-  left: 10px;
+  top: -4em;
+  left: 0.8em;
   background-color: #ff8303;
   color: white;
   padding: 0.4em;
   z-index: 100;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
 }
 
 .skip-content:focus {
@@ -220,7 +221,7 @@ footer .container {
   background: linear-gradient(to right, rgba(3, 9, 17, 0.8), rgba(0, 0, 0, 0.2)),
     url(./../public/images/heros/hero-image_2.jpg) no-repeat top center;
   background-size: cover;
-  height: 36em;
+  height: 40em;
 }
 
 #hero * {
@@ -249,51 +250,51 @@ footer .container {
 
 /* RESTAURANT LIST */
 
-#products {
+#restaurant {
   align-items: center;
   margin-top: 3.2em;
 }
 
-.products-header {
+.restaurant__header {
   text-align: center;
-  margin-bottom: 1.8em;
+  margin-bottom: 1.6em;
 }
 
-.products-header-title {
+.restaurant__header-title {
   font-family: DMSerifDisplay-Regular;
   font-size: 2.4em;
   margin-bottom: 0.2em;
 }
 
-.product-list {
+.restaurant-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.product-item {
+.restaurant-item {
   box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.404);
   background-color: #fff;
   overflow: hidden;
   background-color: white;
   border-radius: 0.8em;
-  width: 22em;
+  width: 24em;
   margin-bottom: 1.6em;
   margin-left: 0.8em;
   margin-right: 0.8em;
   transition: all 0.3s;
 }
 
-.product-item:hover {
+.restaurant-item:hover {
   transform: scale(1.02);
-  box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.202);
+  box-shadow: -2px 4px 16px -8px rgba(0, 0, 0, 0.202);
 }
 
-.product-item a {
+.restaurant-item a {
   text-decoration: none;
 }
 
-.product-img {
+.restaurant-item-image {
   height: 16rem;
   width: 100%;
   background-position: center;
@@ -301,77 +302,22 @@ footer .container {
   background-size: cover;
 }
 
-.product-content {
+.restaurant-item__content {
   padding: 1.2em 1.2em;
 }
 
-.product-content-title {
+.restaurant-item__content-title {
   font-family: DMSerifDisplay-Regular;
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-bottom: 0.1em;
 }
 
-.product-content-label {
+.restaurant-item__content-label {
   font-weight: bold;
 }
 
-.product-content-desc {
+.restaurant-item__content-description {
   opacity: 75%;
-}
-
-/* FEEDBACK */
-
-#feedback {
-  margin-top: 4em;
-  align-items: center;
-}
-
-.feedback-header {
-  margin-bottom: 2.4em;
-}
-
-.feedback-header-title {
-  font-family: DMSerifDisplay-Regular;
-  font-size: 2.4em;
-  margin-bottom: 0.2em;
-}
-
-.feedback-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.feedback-item {
-  box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.33);
-  background-color: #fff;
-  overflow: hidden;
-  background-color: white;
-  border-radius: 0.4em;
-  width: 44%;
-  margin-bottom: 1.4em;
-  padding: 1.2em;
-  margin-right: 1%;
-}
-
-.feedback-profile {
-  display: flex;
-  margin-bottom: 1.6em;
-}
-
-.feedback-profile img {
-  border-radius: 50%;
-  height: 4.6em;
-  width: 4.6em;
-}
-
-.feedback-profile-detail {
-  margin-left: 2em;
-}
-
-.feedback-profile-detail h2 {
-  font-family: DMSerifDisplay-Regular;
 }
 
 /**
@@ -380,12 +326,12 @@ footer .container {
 
 /* PRODUCT DETAIL HEADER */
 
-.product-detail-header {
+.restaurant-detail__header {
   margin-top: 3.2em;
-  margin-bottom: 1.8em;
+  margin-bottom: 1.6em;
 }
 
-.product-detail-title {
+.restaurant-detail__header-title {
   font-size: 2.4em;
   font-family: DMSerifDisplay-Regular;
   margin-bottom: 0.2em;
@@ -393,38 +339,40 @@ footer .container {
 
 /* PRODUCT DETAIL SPECIFIC */
 
-.product-detail-spec {
+.restaurant-detail__header-label {
   display: flex;
   margin-top: 0.4em;
   justify-content: space-between;
 }
 
-.product-detail-location {
+.restaurant-detail__header-location {
   display: flex;
 }
 
-.product-detail-location svg {
+.restaurant-detail__header-location svg {
   padding-top: 0.2em;
   margin-right: 0.6em;
 }
 
-.product-detail-location span {
+.restaurant-detail__header-location span {
   font-family: Poppins-Medium;
 }
 
-.product-detail-rating svg {
+.restaurant-detail__header-rating svg {
   margin-left: 0.4em;
   padding-top: 0.16em;
 }
 
-.product-detail-rating {
+.restaurant-detail__header-rating {
   display: flex;
   padding-bottom: 0.4em;
   font-family: Poppins-SemiBold;
 }
 
-.product-detail-img {
-  height: 28em;
+/* PRODUCT DETAIL IMAGE */
+
+.restaurant-detail__image {
+  height: 32em;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -434,28 +382,26 @@ footer .container {
 
 /* PRODUCT DETAIL OVERVIEW */
 
-.product-detail-overview,
-.product-detail-review {
-  margin-top: 1.2em;
-  margin-bottom: 1.8em;
+.restaurant-detail__overview {
+  margin-top: 0.8em;
+  margin-bottom: 1.6em;
 }
 
-.product-detail-overview h1,
-.product-detail-review h1 {
+.restaurant-detail__overview h1 {
   font-family: DMSerifDisplay-Regular;
   font-size: 2em;
   margin-bottom: 0.2em;
 }
 
-.product-detail-category {
+/* PRODUCT DETAIL CATEGORY */
+
+.restaurant-detail__category {
   margin-top: 0.8em;
   margin-bottom: 1.2em;
   display: flex;
 }
 
-/* PRODUCT DETAIL CATEGORY */
-
-.product-detail-category button {
+.restaurant-detail__category button {
   margin-right: 0.4em;
   padding: 0.2em 0.4em;
   border-radius: 0.4em;
@@ -469,19 +415,19 @@ footer .container {
 
 /* PRODUCT DETAIL MENU */
 
-.product-detail-menu {
+.restaurant-detail__menu {
   display: flex;
 }
 
-.product-detail-menu-container {
-  margin-bottom: 1em;
+.product-detail__menu-container {
+  margin-bottom: 0.8em;
 }
 
-.product-detail-menu-container:first-child {
-  margin-right: 1em;
+.restaurant-detail__menu-container:first-child {
+  margin-right: 0.8em;
 }
 
-.product-detail-menu h2 {
+.restaurant-detail__menu h2 {
   font-family: DMSerifDisplay-Regular;
   font-size: 1.2em;
   margin-bottom: 0.2em;
@@ -489,15 +435,26 @@ footer .container {
 
 /* PRODUCT DETAIL REVIEW */
 
-.product-detail-review-list {
+.restaurant-detail__review {
+  margin-top: 0.8em;
+  margin-bottom: 1.6em;
+}
+
+.restaurant-detail__review h1 {
+  font-family: DMSerifDisplay-Regular;
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+
+.restaurant-detail__review-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 1em;
+  margin-top: 1.2em;
 }
 
-.product-detail-review-item {
-  padding: 1em;
+.restaurant-detail__review-item {
+  padding: 1.2em;
   width: 28%;
   margin-bottom: 1.2em;
   border-radius: 0.4em;
@@ -505,36 +462,36 @@ footer .container {
   box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.404);
 }
 
-.product-detail-review-header {
+.restaurant-detail__review-header {
   display: flex;
 }
 
-.product-detail-review-title {
+.restaurant-detail__review-title {
   margin-left: 1.2em;
 }
 
-.product-detail-review-title h2 {
+.restaurant-detail__review-title h2 {
   font-family: DMSerifDisplay-Regular;
   font-size: 1.2em;
   margin-bottom: -0.2em;
 }
 
-.product-detail-review-title label {
+.restaurant-detail__review-title label {
   font-size: 0.8em;
 }
 
-.product-detail-review-desc {
+.restaurant-detail__review-desc {
   margin-top: 1.2em;
 }
 
 /* FORM REVIEW */
 
-.product-detail-review-form {
+.restaurant-detail__review-form {
   display: flex;
   justify-content: center;
 }
 
-.product-detail-review-form form {
+.restaurant-detail__review-form form {
   box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.404);
   width: 40%;
   padding: 1.2em;
@@ -550,7 +507,7 @@ footer .container {
 
 .form-title h2 {
   font-family: DMSerifDisplay-Regular;
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 .form-group {
@@ -580,7 +537,7 @@ footer .container {
   border-radius: 0.4em;
   border: none;
   background-color: #ff8303;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: rgb(255, 255, 255);
   font-family: Poppins-SemiBold;
 }

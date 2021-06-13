@@ -17,11 +17,11 @@
 
   /* RESTAURANT */
 
-  .product-item {
+  .restaurant-item {
     width: 20em;
   }
 
-  .product-detail-review-item {
+  .restaurant-detail__review-item {
     width: 28%;
   }
 
@@ -33,6 +33,8 @@
 }
 
 @media screen and (max-width: 1024px) {
+  /* TEMPLATE */
+
   .container {
     padding-right: 4em;
     padding-left: 4em;
@@ -43,15 +45,13 @@
     padding-right: 0;
   }
 
-  .product-item {
+  /* RESTAURANT */
+
+  .restaurant-item {
     width: 16em;
   }
 
-  .feedback-item {
-    width: 42%;
-  }
-
-  .product-detail-review-item {
+  .restaurant-detail__review-item {
     width: 44%;
   }
 
@@ -65,8 +65,8 @@
 @media screen and (max-width: 768px) {
   /* TEMPLATE */
   .container {
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-right: 0.8em;
+    padding-left: 0.8em;
   }
 
   .wrapper {
@@ -126,7 +126,9 @@
     z-index: 1;
   }
 
-  .hero {
+  /* HERO */
+
+  #hero {
     height: 34em;
     background: linear-gradient(
         to right,
@@ -136,122 +138,123 @@
       url(./../public/images/heros/hero-image_2.jpg) no-repeat top center;
   }
 
-  .product {
+  .hero-label {
+    font-size: 1em;
+  }
+
+  .hero-title {
+    font-size: 2.4em;
+  }
+
+  .hero-desc {
+    font-size: 0.8em;
+  }
+
+  /* RESTAURANT */
+
+  .restaurant {
     width: 18em;
     margin-bottom: 1.4em;
   }
 
-  .product-item {
-    margin-bottom: 1.2em;
+  .restaurant-item {
+    margin-bottom: 1em;
     margin-left: 0.6em;
     margin-right: 0.6em;
   }
 
-  .hero-label {
-    font-size: 0.9em;
-  }
-
-  .hero-title {
-    font-size: 2.6em;
-  }
-
-  .hero-desc {
-    font-size: 0.9em;
-  }
-
-  .products-header,
-  .product-detail-header {
+  .restaurant__header,
+  .restaurant-detail__header {
     margin-top: 2.4em;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.6em;
   }
 
-  .products-header-title {
-    font-size: 1.8em;
+  .restaurant__header-title {
+    font-size: 2em;
   }
 
-  .products-header-desc,
-  .product-detail-location {
-    font-size: 0.9em;
+  .restaurant__header-description,
+  .restaurant-detail__header-location {
+    font-size: 1em;
   }
 
-  .product-content-title {
-    font-size: 1.4em;
+  .restaurant-item__content-title {
+    font-size: 1.6em;
     margin-bottom: 0;
   }
 
-  .product-content-label {
-    font-size: 0.9em;
+  .restaurant-item__content-label {
+    font-size: 1em;
   }
 
-  .product-content svg {
-    height: 0.9em;
+  .restaurant__content svg {
+    height: 1em;
   }
 
-  .product-content-desc {
-    font-size: 0.9em;
+  .restaurant__content-description {
+    font-size: 1em;
   }
 
   /* PRODUCT DETAIL */
 
-  .product-detail-title {
-    font-size: 2em;
+  .restaurant-detail__header-title {
+    font-size: 2.4em;
   }
 
-  .product-detail-overview h1,
-  .product-detail-review h1 {
-    font-size: 1.8em;
+  .restaurant-detail__overview h1,
+  .restaurant-detail__review h1 {
+    font-size: 1.6em;
   }
 
-  .product-detail-menu {
+  .restaurant-detail__menu {
     display: block;
   }
 
-  .product-detail-menu-container {
+  .restaurant-detail__menu-container {
     margin-bottom: 0.4em;
   }
 
-  .product-detail-menu-container:first-child {
+  .restaurant-detail__menu-container:first-child {
     margin-right: 0;
   }
 
-  .product-detail-review-item {
+  .restaurant-detail__review-item {
     width: 44%;
     margin-bottom: 0.8em;
   }
 
-  .product-detail-review-form form {
+  .restaurant-detail__review-form form {
     width: 60%;
   }
 
   /* LIKE BUTTON */
 
   .like-button {
-    right: 1em;
+    right: 0.8em;
   }
 }
 
 @media screen and (max-width: 584px) {
+  /* HERO */
   .hero {
     height: 64vh;
   }
 
-  .product-item {
+  .restaurant-item {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .restaurant-image {
+    height: 16em;
+  }
+
+  .restaurant-detail__review-item {
     width: 100%;
   }
 
-  .product-img {
-    height: 14em;
-  }
-
-  .feedback-item {
-    width: 100%;
-  }
-
-  .product-detail-review-item {
-    width: 100%;
-  }
-
-  .product-detail-review-form form {
+  .restaurant-detail__review-form form {
     width: 100%;
   }
 }

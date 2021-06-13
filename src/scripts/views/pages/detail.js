@@ -17,7 +17,7 @@ const Detail = {
     return `
     <div class="container">
       <div class="wrapper">
-        <div class="product-detail">
+        <div id="restaurant-detail">
           
         </div>
         <div id="like-button-container">
@@ -30,26 +30,30 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
-    const productDetail = document.querySelector(".product-detail");
+    const restaurantDetail = document.querySelector("#restaurant-detail");
 
-    productDetail.innerHTML = createRestaurantDetailTemplate(
+    restaurantDetail.innerHTML = createRestaurantDetailTemplate(
       restaurant.restaurant
     );
 
-    const productDetailCategory = document.querySelector(
-      ".product-detail-category"
+    const restaurantDetailCategory = document.querySelector(
+      ".restaurant-detail__category"
     );
 
     restaurant.restaurant.categories.forEach((data) => {
-      productDetailCategory.innerHTML +=
+      restaurantDetailCategory.innerHTML +=
         createRestaurantDetailCategoryTemplate(data);
     });
 
-    const menuFoods = document.querySelector(".product-detail-menu-foods");
+    const menuFoods = document.querySelector(".restaurant-detail__menu-foods");
 
-    const menuDrinks = document.querySelector(".product-detail-menu-drinks");
+    const menuDrinks = document.querySelector(
+      ".restaurant-detail__menu-drinks"
+    );
 
-    const reviewList = document.querySelector(".product-detail-review-list");
+    const reviewList = document.querySelector(
+      ".restaurant-detail__review-list"
+    );
 
     restaurant.restaurant.menus.foods.forEach((data) => {
       menuFoods.innerHTML += createMenuItemTemplate(data);
@@ -64,7 +68,9 @@ const Detail = {
       reviewList.innerHTML += createReviewItemTemplate(data, name);
     });
 
-    const formReview = document.querySelector(".product-detail-review-form");
+    const formReview = document.querySelector(
+      ".restaurant-detail__review-form"
+    );
 
     formReview.innerHTML = createFormReviewTemplate();
 

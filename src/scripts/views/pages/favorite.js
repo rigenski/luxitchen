@@ -6,14 +6,14 @@ const Favorite = {
     return `
     <div class="container">
     <div class="wrapper">
-      <div id="products">
-        <div class="products-header">
-          <h1 class="products-header-title">Favorite Restaurant</h1>
-          <p class="products-header-desc">
+      <div id="restaurant">
+        <div class="restaurant__header">
+          <h1 class="restaurant__header-title">Favorite Restaurant</h1>
+          <p class="restaurant__header-description">
             List of restaurants that you have saved.
           </p>
         </div>
-        <div class="product-list">
+        <div class="restaurant-list">
 
         </div>
       </div>
@@ -23,7 +23,7 @@ const Favorite = {
 
   async afterRender() {
     const restaurantList = await FavoriteRestaurantIdb.getAllRestaurants();
-    const productList = document.querySelector(".product-list");
+    const productList = document.querySelector(".restaurant-list");
 
     restaurantList.forEach((data) => {
       productList.innerHTML += createRestaurantTemplate(data);
