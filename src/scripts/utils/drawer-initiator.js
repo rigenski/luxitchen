@@ -1,7 +1,7 @@
 const DrawerInitiator = {
   init({ burger, navList, nav }) {
     burger.addEventListener("click", (event) => {
-      nav.classList.toggle("nav-active");
+      nav.classList.toggle("header__navigation-active");
 
       navList.forEach((link, index) => {
         if (link.style.animation) {
@@ -13,7 +13,7 @@ const DrawerInitiator = {
         }
       });
 
-      burger.classList.toggle("toggle");
+      burger.classList.toggle("toggle-drawer");
     });
   },
 };

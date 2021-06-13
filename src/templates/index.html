@@ -11,86 +11,75 @@
     <title>LUXITCHEN</title>
   </head>
   <body>
-    <a href="#catalog" class="skip-link">Go to Content</a>
+    <a href="#catalog" class="skip-content">Go to Content</a>
     <header>
       <div class="container">
-        <div id="brand">
-          <a class="brand-link" href="/">
+        <div id="header__brand">
+          <a class="header__brand-link" href="/">
             <img
-              class="brand-logo"
+              class="header__brand-logo"
               src="./images/logo.svg"
               alt="logo-luxitchen"
             />
           </a>
         </div>
-        <nav id="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="/#/home" class="nav-link">HOME</a>
+        <nav id="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-item">
+              <a href="/#/home" class="header__navigation-link">HOME</a>
             </li>
-            <li class="nav-item">
-              <a href="#/favorite" class="nav-link">FAVORITE</a>
+            <li class="header__navigation-item">
+              <a href="#/favorite" class="header__navigation-link">FAVORITE</a>
             </li>
-            <li class="nav-item">
+            <li class="header__navigation-item">
               <a
                 href="https://www.linkedin.com/in/rigen-maulana-50a1a81ab/"
                 target="_blank"
-                class="nav-link"
+                class="header__navigation-link"
                 >ABOUT US</a
               >
             </li>
           </ul>
         </nav>
-        <div id="drawer">
-          <div class="cart">
-            <a class="cart-link" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                fill="currentColor"
-                class="bi bi-cart4"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                />
-              </svg>
-              CART</a
+        <div id="header__drawer">
+          <a class="header__drawer-cart" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-cart4"
+              viewBox="0 0 16 16"
+              class="header__drawer-cart-logo"
             >
-          </div>
-          <button class="burger" aria-label="Button Navigation">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+              <path
+                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+              />
+            </svg>
+            CART
+          </a>
+          <button class="header__drawer-burger" aria-label="Button Navigation">
+            <div class="line1 header__drawer-burger-icon"></div>
+            <div class="line2 header__drawer-burger-icon"></div>
+            <div class="line3 header__drawer-burger-icon"></div>
           </button>
         </div>
       </div>
     </header>
     <main id="main">
-      <!-- <div class="container">
-        <div class="wrapper">
-          <div id="feedback">
-            <div class="feedback-header">
-              <h1 class="feedback-header-title">Feedback</h1>
-              <p class="feedback-header-desc">
-                feedback from experienced users.
-              </p>
-            </div>
-            <div class="feedback-list"></div>
-          </div>
-        </div>
-      </div> -->
+      <!-- 
+        CONTENT
+       -->
     </main>
     <footer>
       <div class="container">
-        <label
+        <label id="footer__brand"
           >Copyright &copy; 2021 -
-          <span class="footer-brand">LUXITCHEN</span></label
+          <span class="footer_brand-name">LUXITCHEN</span></label
         >
-        <ul id="social">
-          <li class="social-item">
-            <a href="#" class="social-link"
+        <ul id="footer__social">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -105,8 +94,8 @@
               </svg>
             </a>
           </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -121,8 +110,8 @@
               </svg>
             </a>
           </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

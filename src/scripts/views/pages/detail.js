@@ -68,12 +68,6 @@ const Detail = {
 
     formReview.innerHTML = createFormReviewTemplate();
 
-    // const likeButtonContainer = document.querySelector(
-    //   "#like-button-container"
-    // );
-
-    // likeButtonContainer.innerHTML = createLikeButtonTemplate();
-
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector("#like-button-container"),
       restaurant: {

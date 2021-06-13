@@ -4,17 +4,17 @@ import { createRestaurantTemplate } from "../templates/template";
 const Home = {
   async render() {
     return `
-    <div class="hero">
+    <div id="hero">
         <div class="container">
           <div class="wrapper">
             <label class="hero-label">YOUR BEST DAY</label>
             <h1 class="hero-title">
               Enjoy good needs <br />Starting from where you eat
             </h1>
-            <p class="hero-desc">
+            <p class="hero-description">
               Starting from rampant hunger that makes you discouraged, find a
               place to eat <br />with unlimited quality easily near your place.
-              Try to start and don't<br />
+              Try to start and don't <br />
               forget to share your experience <br />
             </p>
           </div>

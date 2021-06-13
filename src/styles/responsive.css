@@ -3,6 +3,8 @@
  */
 
 @media screen and (max-width: 1440px) {
+  /* TEMPLATE */
+
   .container {
     padding-right: 6em;
     padding-left: 6em;
@@ -12,6 +14,8 @@
     padding-left: 2em;
     padding-right: 2em;
   }
+
+  /* RESTAURANT */
 
   .product-item {
     width: 20em;
@@ -59,6 +63,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* TEMPLATE */
   .container {
     padding-right: 1em;
     padding-left: 1em;
@@ -68,6 +73,12 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
 
   header {
     position: fixed;
@@ -86,7 +97,7 @@
     box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.33);
   }
 
-  .nav-list {
+  .header__navigation-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,26 +106,24 @@
     margin-top: 4vh;
   }
 
-  .cart {
+  .header__navigation-item {
+    opacity: 0;
+  }
+
+  .header__drawer-cart {
     display: none;
   }
+
+  .header__drawer-burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* MAIN */
 
   main {
     padding-top: 4.6em;
     z-index: 1;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-item {
-    opacity: 0;
-  }
-
-  .burger {
-    display: block;
-    cursor: pointer;
   }
 
   .hero {

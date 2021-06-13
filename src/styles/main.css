@@ -1,3 +1,7 @@
+/**
+* FONT
+*/
+
 @font-face {
   font-family: Poppins-Medium;
   src: url(../public/fonts/Poppins-Medium.ttf);
@@ -50,19 +54,19 @@ body {
 * SKIP LINK
 */
 
-.skip-link {
+.skip-content {
   position: absolute;
   top: -60px;
   left: 10px;
   background-color: #ff8303;
   color: white;
-  padding: 8px;
+  padding: 0.4em;
   z-index: 100;
   transition: all 0.3s ease;
 }
 
-.skip-link:focus {
-  top: 10px;
+.skip-content:focus {
+  top: 0.8em;
 }
 
 /**
@@ -70,7 +74,7 @@ body {
  */
 
 header {
-  height: 4.6em;
+  height: 4.8em;
   width: 100%;
   background-color: #fff;
 }
@@ -78,42 +82,42 @@ header {
 header .container {
   justify-content: space-between;
   align-items: center;
-  height: 4.6em;
+  height: 4.8em;
 }
 
-.brand-logo {
+/* BRAND */
+
+.header__brand-logo {
   height: 1.6em;
 }
 
-.brand-link {
+.header__brand-link {
   padding: 0.8em 0.8em 0.8em 0;
 }
 
-/*
-* NAV
-*/
+/* NAV */
 
-.nav-list {
+.header__navigation-list {
   display: flex;
 }
 
-.nav-item {
+.header__navigation-item {
   list-style: none;
   margin: auto 0.4em;
 }
 
-.nav-link {
+.header__navigation-link {
   text-decoration: none;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   font-family: Poppins-Medium;
   padding: 0.8em;
 }
 
-.nav-link:hover {
+.header__navigation-link:hover {
   color: #ff8303;
 }
 
-.nav-active {
+.header__navigation-active {
   transform: translateX(0%);
 }
 
@@ -128,44 +132,46 @@ header .container {
   }
 }
 
-#drawer {
+/* DRAWER */
+
+/* #header__drawer {
   display: flex;
   margin-left: 4em;
-}
+} */
 
-.cart-link {
+.header__drawer-cart {
   text-decoration: none;
   font-family: Poppins-Medium;
   padding: 0.8em 0 0.8em 0.8em;
 }
 
-.cart-link svg {
+.header__drawer-cart-logo {
   margin-right: 0.2em;
 }
 
-.burger {
+.header__drawer-burger {
   display: none;
   background: none;
   border: none;
 }
 
-.burger div {
-  width: 24px;
-  height: 4px;
+.header__drawer-burger-icon {
+  width: 1.6em;
+  height: 0.4em;
   background-color: #030911;
-  margin: 4px;
+  margin: 0.2em;
   transition: all 0.2s ease;
 }
 
-.toggle .line1 {
+.toggle-drawer .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.toggle .line2 {
+.toggle-drawer .line2 {
   opacity: 0;
 }
 
-.toggle .line3 {
+.toggle-drawer .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
@@ -176,29 +182,29 @@ header .container {
 footer {
   width: 100%;
   height: 4em;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
 footer .container {
   justify-content: space-between;
 }
 
-.footer-brand {
+.footer_brand-name {
   font-family: DMSerifDisplay-Regular;
   font-weight: bold;
 }
 
 /* SOCIAL */
 
-#social {
+#footer__social {
   display: flex;
 }
 
-.social-item {
+.footer__social-item {
   list-style: none;
 }
 
-.social-item a {
+.footer__social-link {
   text-decoration: none;
   padding: 0.8em;
 }
@@ -209,24 +215,24 @@ footer .container {
 
 /* HERO */
 
-.hero {
+#hero {
   color: white;
-  background: linear-gradient(to right, rgba(3, 9, 17, 0.8), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(3, 9, 17, 0.8), rgba(0, 0, 0, 0.2)),
     url(./../public/images/heros/hero-image_2.jpg) no-repeat top center;
   background-size: cover;
   height: 36em;
 }
 
-.hero * {
+#hero * {
   color: #fff;
 }
 
-.hero .container {
+#hero .container {
   align-items: center;
 }
 
 .hero-label {
-  letter-spacing: 0.06em;
+  letter-spacing: 0.4em;
 }
 
 .hero-title {
@@ -237,11 +243,11 @@ footer .container {
   letter-spacing: 0.02em;
 }
 
-.hero-desc {
+.hero-description {
   letter-spacing: 0.02em;
 }
 
-/* PRODUCTS LIST */
+/* RESTAURANT LIST */
 
 #products {
   align-items: center;
