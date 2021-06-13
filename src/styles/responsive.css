@@ -20,6 +20,12 @@
   .product-detail-review-item {
     width: 28%;
   }
+
+  /* LIKE BUTTON */
+
+  .like-button {
+    right: 6em;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -43,6 +49,12 @@
 
   .product-detail-review-item {
     width: 44%;
+  }
+
+  /* LIKE BUTTON */
+
+  .like-button {
+    right: 4.6em;
   }
 }
 
@@ -200,6 +212,12 @@
 
   .product-detail-review-form form {
     width: 60%;
+  }
+
+  /* LIKE BUTTON */
+
+  .like-button {
+    right: 1em;
   }
 }
 

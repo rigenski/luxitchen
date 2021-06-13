@@ -6,8 +6,11 @@ import {
   createRestaurantDetailCategoryTemplate,
   createReviewItemTemplate,
   createFormReviewTemplate,
+  // createLikeButtonTemplate,
+  // createLikedButtonTemplate,
 } from "../templates/template";
 import FormReviewInitiator from "../../utils/form-review-initiator";
+import LikeButtonInitiator from "../../utils/like-button-initiator";
 
 const Detail = {
   async render() {
@@ -16,6 +19,8 @@ const Detail = {
       <div class="wrapper">
         <div class="product-detail">
           
+        </div>
+        <div id="like-button-container">
         </div>
       </div>
     </div>
@@ -62,6 +67,24 @@ const Detail = {
     const formReview = document.querySelector(".product-detail-review-form");
 
     formReview.innerHTML = createFormReviewTemplate();
+
+    // const likeButtonContainer = document.querySelector(
+    //   "#like-button-container"
+    // );
+
+    // likeButtonContainer.innerHTML = createLikeButtonTemplate();
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector("#like-button-container"),
+      restaurant: {
+        id: restaurant.restaurant.id,
+        name: restaurant.restaurant.name,
+        description: restaurant.restaurant.description,
+        pictureId: restaurant.restaurant.pictureId,
+        city: restaurant.restaurant.city,
+        rating: restaurant.restaurant.rating,
+      },
+    });
 
     FormReviewInitiator.init();
   },
