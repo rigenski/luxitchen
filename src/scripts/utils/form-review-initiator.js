@@ -11,7 +11,7 @@ const FormReviewInitiator = {
 
     submit.addEventListener("click", function () {
       const data = JSON.stringify({
-        id: url[2],
+        id: url.slice(-1).pop(),
         name: name.value,
         review: review.value,
       });

@@ -18,8 +18,6 @@ class App {
       navList: this._navList,
       nav: this._nav,
     });
-
-    // kita bisa menginisiasikan komponen lain bila ada
   }
 
   async renderPage() {

@@ -6,8 +6,6 @@ import {
   createRestaurantDetailCategoryTemplate,
   createReviewItemTemplate,
   createFormReviewTemplate,
-  // createLikeButtonTemplate,
-  // createLikedButtonTemplate,
 } from "../templates/template";
 import FormReviewInitiator from "../../utils/form-review-initiator";
 import LikeButtonInitiator from "../../utils/like-button-initiator";

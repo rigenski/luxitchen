@@ -38,10 +38,10 @@ const Home = {
 
   async afterRender() {
     const restaurantList = await RestaurantDbSource.restaurantList();
-    const productList = document.querySelector(".restaurant-list");
+    const restaurantListContainer = document.querySelector(".restaurant-list");
 
     restaurantList.restaurants.forEach((data) => {
-      productList.innerHTML += createRestaurantTemplate(data);
+      restaurantListContainer.innerHTML += createRestaurantTemplate(data);
     });
   },
 };
