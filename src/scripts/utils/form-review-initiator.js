@@ -1,15 +1,15 @@
-import RestaurantDbSource from "../data/restaurantdb-source";
+import RestaurantDbSource from '../data/restaurantdb-source';
 
 const FormReviewInitiator = {
   init() {
-    const name = document.getElementById("input-name");
-    const review = document.getElementById("input-review");
-    const submit = document.getElementById("form-submit");
+    const name = document.getElementById('input-name');
+    const review = document.getElementById('input-review');
+    const submit = document.getElementById('form-submit');
 
     let url = window.location.hash;
-    url = url.split("/");
+    url = url.split('/');
 
-    submit.addEventListener("click", function () {
+    submit.addEventListener('click', () => {
       const data = JSON.stringify({
         id: url.slice(-1).pop(),
         name: name.value,

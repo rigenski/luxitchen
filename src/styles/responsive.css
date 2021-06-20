@@ -87,7 +87,7 @@
 
   nav {
     position: fixed;
-    right: 0px;
+    right: 0;
     height: 94vh;
     top: 7.4vh;
     background-color: #ffffff;
@@ -110,9 +110,13 @@
     opacity: 0;
   }
 
-  .header__drawer-cart {
+  #header__cart {
     display: none;
   }
+
+  #header__drawer {
+  display: block;
+}
 
   .header__drawer-burger {
     display: block;

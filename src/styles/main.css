@@ -140,24 +140,29 @@ header .container {
   margin-left: 4em;
 } */
 
-.header__drawer-cart {
+#header__cart {
   text-decoration: none;
   font-family: Poppins-Medium;
   padding: 0.8em 0 0.8em 0.8em;
 }
 
-.header__drawer-cart-logo {
+.header__cart-logo {
   margin-right: 0.2em;
+}
+
+#header__drawer {
+  display: none;
 }
 
 .header__drawer-burger {
   display: none;
   background: none;
   border: none;
+  padding: 0.8em;
 }
 
 .header__drawer-burger-icon {
-  width: 1.6em;
+  width: 2em;
   height: 0.4em;
   background-color: #030911;
   margin: 0.2em;
@@ -165,7 +170,7 @@ header .container {
 }
 
 .toggle-drawer .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-10px, 2px);
 }
 
 .toggle-drawer .line2 {
@@ -173,7 +178,7 @@ header .container {
 }
 
 .toggle-drawer .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-10px, -2px);
 }
 
 /**
@@ -285,12 +290,13 @@ footer .container {
   transition: all 0.3s;
 }
 
-.restaurant-item:hover {
+.restaurant-item:hover, .restaurant-item:focus {
   transform: scale(1.02);
   box-shadow: -2px 4px 16px -8px rgba(0, 0, 0, 0.202);
 }
 
-.restaurant-item a {
+
+.restaurant-item {
   text-decoration: none;
 }
 
@@ -401,7 +407,7 @@ footer .container {
   display: flex;
 }
 
-.restaurant-detail__category button {
+.restaurant-detail__category-item {
   margin-right: 0.4em;
   padding: 0.2em 0.4em;
   border-radius: 0.4em;
@@ -522,18 +528,17 @@ footer .container {
 
 .form-input {
   width: 99%;
-  height: 1.8em;
+  height: 3.4em;
   border: none;
   border-bottom: 1px solid #030911;
 }
 
 .form-input:focus {
-  outline: none;
-  background-color: none;
+  background-color: none; 
 }
 
 #form-submit {
-  padding: 0.4em 1.2em;
+  padding: 1.02em 1.6em;
   border-radius: 0.4em;
   border: none;
   background-color: #ff8303;

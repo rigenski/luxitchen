@@ -1,9 +1,12 @@
-import DrawerInitiator from "../utils/drawer-initiator";
-import routes from "../routes/routes";
-import UrlParser from "../routes/url-parser";
+/* eslint-disable no-underscore-dangle */
+import DrawerInitiator from '../utils/drawer-initiator';
+import routes from '../routes/routes';
+import UrlParser from '../routes/url-parser';
 
 class App {
-  constructor({ burger, navList, nav, content }) {
+  constructor({
+    burger, navList, nav, content,
+  }) {
     this._burger = burger;
     this._navList = navList;
     this._nav = nav;

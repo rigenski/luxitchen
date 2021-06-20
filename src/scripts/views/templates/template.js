@@ -1,8 +1,7 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config';
 
 const createRestaurantTemplate = (data) => `
-<div class="restaurant-item">
-  <a href="#/detail/${data.id}">
+  <a class="restaurant-item" href="#/detail/${data.id}">
     <div
       class="restaurant-item-image"
       style="background-image: url(${CONFIG.BASE_IMAGE_URL}/${data.pictureId})"
@@ -32,7 +31,6 @@ const createRestaurantTemplate = (data) => `
       </p>
     </div></a
   >
-</div>
 `;
 const createRestaurantDetailTemplate = (data) => `
 <div class="restaurant-detail__header">
@@ -106,7 +104,7 @@ const createRestaurantDetailTemplate = (data) => `
   `;
 
 const createRestaurantDetailCategoryTemplate = (data) => `
-    <button>${data.name}</button>
+    <div class="restaurant-detail__category-item">${data.name}</button>
   `;
 
 const createMenuItemTemplate = (data) => `
