@@ -8,7 +8,7 @@ import {
   createFormReviewTemplate,
 } from '../templates/template';
 import FormReviewInitiator from '../../utils/form-review-initiator';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 
 const Detail = {
   async render() {
@@ -72,7 +72,7 @@ const Detail = {
 
     formReview.innerHTML = createFormReviewTemplate();
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#like-button-container'),
       restaurant: {
         id: restaurant.restaurant.id,
