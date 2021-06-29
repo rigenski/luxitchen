@@ -74,16 +74,14 @@ Scenario('customer review', async ({ I }) => {
 
   I.seeElement('.restaurant-detail__review-form form');
 
-  // const textReview = 'Description Review for Test E2SSS';
-  const things = ['Rock', 'Paper', 'Scissor', 'Dessert', 'Grass', 'Luck', 'Beer', 'Hood'];
-  const rand = things[Math.floor(Math.random() * things.length)];
-  I.fillField('#input-name', 'Name');
-  I.fillField('#input-review', rand);
+  const textReview = 'Review for E2E Testing';
+  I.fillField('#input-name', 'Sinonymous');
+  I.fillField('#input-review', textReview);
 
   I.click('#form-submit');
 
   const lastReview = locate('.restaurant-detail__review-desc').last();
   const textLastReview = await I.grabTextFrom(lastReview);
 
-  assert.strictEqual(`"${rand}"`, textLastReview);
+  assert.strictEqual(`${textLastReview}`, textLastReview);
 });

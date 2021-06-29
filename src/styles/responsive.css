@@ -139,7 +139,7 @@
         rgba(3, 9, 17, 0.8),
         rgba(0, 0, 0, 0.06)
       ),
-      url(./../public/images/heros/hero-image_2.jpg) no-repeat top center;
+      url(/images/heros/hero-image_2-medium.jpg) no-repeat top center;
   }
 
   .hero-label {

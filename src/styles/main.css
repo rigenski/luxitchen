@@ -4,22 +4,22 @@
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url(../public/fonts/Poppins-Medium.ttf);
+  src: url(/fonts/Poppins-Medium.ttf);
 }
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url(../public/fonts/Poppins-Regular.ttf);
+  src: url(/fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url(../public/fonts/Poppins-SemiBold.ttf);
+  src: url(/fonts/Poppins-SemiBold.ttf);
 }
 
 @font-face {
   font-family: DMSerif-Regular;
-  src: url(../public/fonts/DMSerifDisplay-Regular.ttf);
+  src: url(/fonts/DMSerifDisplay-Regular.ttf);
 }
 
 /**
@@ -224,7 +224,7 @@ footer .container {
 #hero {
   color: white;
   background: linear-gradient(to right, rgba(3, 9, 17, 0.8), rgba(0, 0, 0, 0.2)),
-    url(./../public/images/heros/hero-image_2.jpg) no-repeat top center;
+    url(/images/heros/hero-image_2-large.jpg) no-repeat top center;
   background-size: cover;
   height: 40em;
 }
