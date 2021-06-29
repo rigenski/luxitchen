@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createRestaurantTemplate = (data) => `
   <a class="restaurant-item" href="#/detail/${data.id}">
     <div
-      class="restaurant-item-image"
+      class="restaurant-item-image lazyload"
       style="background-image: url(${CONFIG.BASE_IMAGE_URL}/${data.pictureId})"
       alt="${data.name} avatar image"
     ></div>
@@ -132,7 +132,7 @@ const createReviewItemTemplate = (data, name) => `
   `;
 
 const createFormReviewTemplate = () => `
-<form>
+<form onsubmit="return false">
     <div class="form-title">
       <h2>Send Review</h2>  
     </div>
@@ -171,5 +171,5 @@ export {
   createReviewItemTemplate,
   createFormReviewTemplate,
   createLikeRestaurantButtonTemplate,
-  createLikedRestaurantButtonTemplate
+  createLikedRestaurantButtonTemplate,
 };

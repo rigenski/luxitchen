@@ -277,6 +277,12 @@ footer .container {
   justify-content: center;
 }
 
+.restaurant-item__not-found {
+  font-family: DMSerifDisplay-Regular;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
 .restaurant-item {
   box-shadow: -2px 4px 16px -10px rgba(0, 0, 0, 0.404);
   background-color: #fff;

@@ -14,7 +14,7 @@ class RestaurantDbSource {
   }
 
   static async sendReview(data) {
-    await fetch(API_ENDPOINT.REVIEW, {
+    const response = await fetch(API_ENDPOINT.REVIEW, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ class RestaurantDbSource {
       body: data,
     });
 
-    return window.location.reload();
+    return response;
   }
 }
 

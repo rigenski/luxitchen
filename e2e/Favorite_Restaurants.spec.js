@@ -2,14 +2,14 @@ const assert = require('assert');
 
 Feature('Favorite Restaurants');
 
-Before((I) => {
+Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-const firstCondition = 'no favorite restaurants to show';
+const firstCondition = 'You dont have a list of Favorite Restaurants';
 
 Scenario('liking one restaurant', async ({ I }) => {
-  I.see('Tidak ada restoran untuk ditampilkan', '.restaurant-list');
+  I.see(firstCondition, '.restaurant-item__not-found');
 
   I.amOnPage('/');
 
@@ -29,8 +29,8 @@ Scenario('liking one restaurant', async ({ I }) => {
   assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
 });
 
-Scenario('unliking one restaurant', async (I) => {
-  I.see('Tidak ada restoran untuk ditampilkan', '.restaurant-list');
+Scenario('unliking one restaurant', async ({I}) => {
+  I.see(firstCondition, '.restaurant-item__not-found');
 
   I.amOnPage('/');
 
@@ -59,13 +59,13 @@ Scenario('unliking one restaurant', async (I) => {
   // kembali ke halaman fav
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant-list');
-  const noFavRestaurant = await I.grabTextFrom('.restaurant-list');
+  const noFavRestaurant = await I.grabTextFrom('.restaurant-item__not-found');
 
-  assert.strictEqual(noFavRestaurant, 'Tidak ada restoran untuk ditampilkan');
+  assert.strictEqual(noFavRestaurant, firstCondition);
 });
 
-Scenario('customer review', async (I) => {
-  I.see(firstCondition, 'restaurant-list');
+Scenario('customer review', async ({ I }) => {
+  I.see(firstCondition, '.restaurant-item__not-found');
 
   I.amOnPage('/');
 
@@ -74,14 +74,16 @@ Scenario('customer review', async (I) => {
 
   I.seeElement('.restaurant-detail__review-form form');
 
-  const textReview = 'Testing Review';
-  I.fillField('inputName', 'firman jabar');
-  I.fillField('inputReview', textReview);
+  // const textReview = 'Description Review for Test E2SSS';
+  const things = ['Rock', 'Paper', 'Scissor', 'Dessert', 'Grass', 'Luck', 'Beer', 'Hood'];
+  const rand = things[Math.floor(Math.random() * things.length)];
+  I.fillField('#input-name', 'Name');
+  I.fillField('#input-review', rand);
 
   I.click('#form-submit');
 
   const lastReview = locate('.restaurant-detail__review-desc').last();
   const textLastReview = await I.grabTextFrom(lastReview);
 
-  assert.strictEqual(textReview, textLastReview);
+  assert.strictEqual(`"${rand}"`, textLastReview);
 });

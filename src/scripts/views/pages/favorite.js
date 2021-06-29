@@ -14,7 +14,7 @@ const Favorite = {
           </p>
         </div>
         <div class="restaurant-list">
-
+          
         </div>
       </div>
   </div>
@@ -24,6 +24,14 @@ const Favorite = {
   async afterRender() {
     const restaurantList = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantListContainer = document.querySelector('.restaurant-list');
+
+    if (restaurantList.length === 0) {
+      restaurantListContainer.innerHTML = `
+      <div class="restaurant-item__not-found">
+        You dont have a list of Favorite Restaurants
+      </div>
+      `;
+    }
 
     restaurantList.forEach((data) => {
       restaurantListContainer.innerHTML += createRestaurantTemplate(data);
