@@ -6,10 +6,10 @@ Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-const firstCondition = 'You dont have a list of Favorite Restaurants';
+const notFoundCondition = 'You dont have a list of Favorite Restaurants';
 
-Scenario('liking one restaurant', async ({ I }) => {
-  I.see(firstCondition, '.restaurant-item__not-found');
+Scenario('liking a restaurant to add to favorite list', async ({ I }) => {
+  I.see(notFoundCondition, '.restaurant-item__not-found');
 
   I.amOnPage('/');
 
@@ -24,13 +24,13 @@ Scenario('liking one restaurant', async ({ I }) => {
 
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant-item');
-  const likedRestaurantTitle = await I.grabTextFrom('.restaurant-item__content-title');
+  const firstFavoriteRestaurantTitle = await I.grabTextFrom('.restaurant-item__content-title');
 
-  assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+  assert.strictEqual(firstRestaurantTitle, firstFavoriteRestaurantTitle);
 });
 
-Scenario('unliking one restaurant', async ({I}) => {
-  I.see(firstCondition, '.restaurant-item__not-found');
+Scenario('unliking a restaurant to add to favorite list', async ({ I }) => {
+  I.see(notFoundCondition, '.restaurant-item__not-found');
 
   I.amOnPage('/');
 
@@ -45,27 +45,24 @@ Scenario('unliking one restaurant', async ({I}) => {
 
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant-item');
-  const likedRestaurantTitle = await I.grabTextFrom('.restaurant-item__content-title');
+  const firstFavoriteRestaurantTitle = await I.grabTextFrom('.restaurant-item__content-title');
 
-  assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+  assert.strictEqual(firstRestaurantTitle, firstFavoriteRestaurantTitle);
 
-  // mengklik card restaurant yg ada di fav
-  I.click(likedRestaurantTitle);
+  I.click(firstFavoriteRestaurantTitle);
 
-  // mengunlike restaurant yang ada di fav
   I.seeElement('#like-button');
   I.click('#like-button');
 
-  // kembali ke halaman fav
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant-list');
-  const noFavRestaurant = await I.grabTextFrom('.restaurant-item__not-found');
+  const notFoundFavoriteRestaurant = await I.grabTextFrom('.restaurant-item__not-found');
 
-  assert.strictEqual(noFavRestaurant, firstCondition);
+  assert.strictEqual(notFoundFavoriteRestaurant, notFoundCondition);
 });
 
-Scenario('customer review', async ({ I }) => {
-  I.see(firstCondition, '.restaurant-item__not-found');
+Scenario('customer reviews on a restaurant', async ({ I }) => {
+  I.see(notFoundCondition, '.restaurant-item__not-found');
 
   I.amOnPage('/');
 
@@ -74,14 +71,14 @@ Scenario('customer review', async ({ I }) => {
 
   I.seeElement('.restaurant-detail__review-form form');
 
-  const textReview = 'Review for E2E Testing';
-  I.fillField('#input-name', 'Sinonymous');
-  I.fillField('#input-review', textReview);
+  const descReview = 'Review for E2E Testing';
+  I.fillField('#input-name', 'Rigen Maulana');
+  I.fillField('#input-review', descReview);
 
   I.click('#form-submit');
 
   const lastReview = locate('.restaurant-detail__review-desc').last();
-  const textLastReview = await I.grabTextFrom(lastReview);
+  const descLastReview = await I.grabTextFrom(lastReview);
 
-  assert.strictEqual(`${textLastReview}`, textLastReview);
+  assert.strictEqual(`"${descReview}"`, descLastReview);
 });
