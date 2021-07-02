@@ -2,11 +2,12 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantTemplate = (data) => `
   <a class="restaurant-item" href="#/detail/${data.id}">
-    <div
+    <img
       class="restaurant-item-image lazyload"
-      style="background-image: url(${CONFIG.BASE_IMAGE_URL}/${data.pictureId})"
-      alt="${data.name} avatar image"
-    ></div>
+      src="./images/dummy-image.png"
+      data-src="${CONFIG.BASE_IMAGE_URL}/${data.pictureId}"
+      alt="Restaurant ${data.name} Image"
+    ></img>
     <div class="restaurant-item__content">
       <h2 class="restaurant-item__content-title">${data.name}</h2>
       <label class="restaurant-item__content-label">${data.city} | ${
